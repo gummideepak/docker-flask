@@ -1,3 +1,35 @@
 body {
-font-size: 200%;
+    font-family: Helvetica, "Helvetica Neue", sans-serif;
+}
+html, body, header, #intro {
+    height: 70%;
+}
+
+#intro {
+    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#header-row {
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img%20%283%29.jpg");
+  }
+
+  .hero {
+	margin: 72px 0 5px;
+	padding: 100px 30px 60px;
+    margin: 0 0 5px;
+    padding-bottom: 120px;
+    font-size: 44px;
+    font-size: 2.75rem;
+	background: red;
+
+	color: beige;
+}
+.btn.beige {
+    background: #f8ecbd;
+    border: 2px solid #f8ecbd;
+    color: #c11b1b;
 }

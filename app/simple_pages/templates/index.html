@@ -1,4 +1,83 @@
 {% extends "base.html" %}
 {% block content %}
-    Index Page
+<!-- <div class="row">
+    <div class="container">
+        <div class="hero hero-home">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec vulputate justo, id &amp; augue.</p>
+
+            <a href="" class="btn beige" title="Get In Touch">Signup now</a>
+        </div><!-- /.hero hero-home -->
+    </div><!-- /.container -->
+</div> -->
+<div class="content" style="padding-top: 5%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/zlayout.svg') }}" alt="Image" class="img-fluid"
+                    data-pagespeed-url-hash="4289692523"
+                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            </div>
+            <div class="col-md-6 contents">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="mb-4">
+                            <h3>Sign In</h3>
+                            <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
+                                adipisicing.</p>
+                        </div>
+                        <form action="#" method="post">
+                            <div class="form-group first">
+                                <label for="username">Username</label>
+                                <input type="text" class="form-control" id="username">
+                            </div>
+                            <div class="form-group last mb-4">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                            <div class="d-flex mb-5 align-items-center">
+                                <label class="control control--checkbox mb-0"><span class="caption">Remember
+                                        me</span>
+                                    <input type="checkbox" checked="">
+                                    <div class="control__indicator"></div>
+                                </label>
+                                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
+                            </div>
+                            <input type="submit" value="Log In" class="btn btn-block btn-primary">
+                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
+                            <div class="social-login">
+                                <a href="#" class="facebook">
+                                    <span class="icon-facebook mr-3"></span>
+                                </a>
+                                <a href="#" class="twitter">
+                                    <span class="icon-twitter mr-3"></span>
+                                </a>
+                                <a href="#" class="google">
+                                    <span class="icon-google mr-3"></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="intro" class="view">
+    <div class="mask">
+    </div>
+</div>
+<div class="container">
+    <h1>Terms and Conditions</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec vulputate justo, id tristique augue. Duis sodales aliquet neque, et vehicula ante. Cras tristique erat at quam gravida varius. Morbi aliquet consectetur tellus, eget lacinia sem sollicitudin ut. Donec eu justo eu enim cursus aliquet. Ut suscipit massa ac libero mollis, a hendrerit nibh congue. Cras sed mi at quam dictum hendrerit. Donec at pretium lorem. Aenean quis aliquam neque.
+    </p>
+    <p>Morbi ultrices nulla vel facilisis pharetra. Etiam vel magna sed purus sodales hendrerit a vitae lectus. Etiam luctus est scelerisque maximus iaculis. Phasellus sollicitudin, enim ac fringilla lacinia, erat quam luctus lectus, sit amet scelerisque sem leo a neque. Praesent tincidunt libero vitae placerat vestibulum. Etiam vel lectus id ante tincidunt elementum sit amet id turpis. Donec at luctus est. Cras a porta dui, at luctus felis. Nullam suscipit ex ac enim mollis placerat. Morbi ante leo, semper vel rutrum vitae, vulputate nec felis. Integer gravida aliquam quam, a malesuada enim mollis vitae. Mauris ut ex sit amet diam ultricies porttitor. Aenean blandit fringilla augue a blandit. Nulla rhoncus fringilla neque, id sollicitudin nibh faucibus non. Vestibulum bibendum sem augue, sit amet dapibus mi efficitur et. Curabitur ultrices porttitor pellentesque.
+    </p>
+    <p>Etiam euismod tristique suscipit. Fusce mollis eget libero efficitur dapibus. Sed egestas nisi at fringilla iaculis. Integer nec molestie sapien. Praesent mollis, felis euismod porta lacinia, turpis risus ultricies quam, eu pharetra diam dolor et odio. Aliquam feugiat tortor at mi iaculis, sed dapibus magna dictum. Integer sed cursus leo. Praesent ut ligula lectus. Nam ut odio dolor. Aenean aliquam commodo velit, a molestie augue pretium a. Sed venenatis nec nisl nec vulputate.
+    </p>
+    <p>Etiam vel lorem sollicitudin, accumsan lacus ac, gravida diam. Duis mollis cursus lorem vitae feugiat. Aenean a nisi aliquam, posuere metus vel, hendrerit est. Phasellus egestas sem eu sapien dapibus, at dictum lacus sollicitudin. Donec facilisis odio eu feugiat rutrum. Pellentesque felis nisl, maximus ut tellus eu, sollicitudin bibendum velit. Suspendisse euismod, metus a lacinia tincidunt, diam sapien elementum dolor, euismod mattis eros sem eget velit.
+    </p>
+    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consectetur rutrum quam eget malesuada. Donec mattis libero ex, a lacinia lorem volutpat et. Ut quis ligula varius, luctus nibh nec, auctor quam. Mauris pretium id ante eu tincidunt. Mauris aliquam rhoncus odio, eget consequat augue condimentum in. Etiam libero sapien, varius ut cursus nec, ornare pharetra nibh. Etiam sed augue augue. Integer quis suscipit odio, vitae aliquet risus. Pellentesque laoreet ipsum id venenatis aliquam. Nunc varius tortor at sem congue rutrum. Nunc mollis nunc vel mollis condimentum. Fusce suscipit et nunc luctus varius.
+    </p>
+</div>
 {% endblock %}
