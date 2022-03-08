@@ -1,4 +1,4 @@
-name: Run Tests, Build Dockerfile, Run on Heroku
+name: [PROD] Run Tests, Build Dockerfile, Run on Heroku
 
 on:
   push:
