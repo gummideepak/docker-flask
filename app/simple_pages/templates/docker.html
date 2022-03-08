@@ -1,0 +1,186 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-5">
+                                <h1>Introduction to Docker</h1>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <section>
+                            <div>
+                                <p>
+                                    Docker is a set of platform as a service products that use OS-level virtualisation
+                                    to deliver software in packages called containers. Containers are isolated from one
+                                    another and bundle their own software, libraries and configuration files; they can
+                                    communicate with each other through well-defined channels. All containers are run by
+                                    a single <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)"
+                                        target="_blank">operating-system kernel</a> and are thus more lightweight than
+                                    <a href="https://en.wikipedia.org/wiki/Virtual_machine" target="_blank">virtual
+                                        machines</a>.
+                                </p>
+                                <p>
+                                    Docker is a platform for developers and sysadmins to build, share, and run
+                                    applications with containers. The use of containers to deploy applications is called
+                                    containerisation. Containers are not new, but their use for easily deploying
+                                    applications is.
+                                    Containerisation is increasingly popular because containers are:
+                                    <ul style="padding-left:5%;list-style-type: disc !important">
+                                        <li style="list-style-type: square;">Flexible: Even the most complex applications can be containerised.</li>
+                                        <li style="list-style-type: square;">Lightweight: Containers leverage and share the host kernel, making them much more
+                                            efficient in terms of system resources than virtual machines.</li>
+                                        <li style="list-style-type: square;">Portable: You can build locally, deploy to the cloud, and run anywhere.</li>
+                                        <li style="list-style-type: square;">Loosely coupled: Containers are highly self sufficient and encapsulated, allowing
+                                            you to replace or upgrade one without disrupting others.</li>
+                                        <li style="list-style-type: square;">Scalable: You can increase and automatically distribute container replicas across a
+                                            datacenter.</li>
+                                        <li style="list-style-type: square;">Secure: Containers apply aggressive constraints and isolations to processes without
+                                            any configuration required on the part of the user.</li>
+                                    </ul>
+                                </p>
+                        </section>
+                        <!-- <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section> -->
+                        <br>
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/repo.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Git Repository</h2>
+                                            <p class="card-text">A Git repository is a virtual storage of your project.
+                                                It allows you to save versions of your code, which you can access when
+                                                needed. To create a new repo, you'll use the git init command. git init
+                                                is a one-time command you use during the initial setup of a new repo.
+                                                Executing this command will create a new .git subdirectory in your
+                                                current working directory. This will also create a new main branch. <a
+                                                    href="https://www.atlassian.com/git/tutorials/setting-up-a-repository"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to commit to a branch: <small
+                                                    class="text-muted"><code>$git init &ltproject directory&gt"</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/branch.png') }}"
+                                            class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Branches</h2>
+                                            <p class="card-text">A branch is essentially is a unique set of code changes
+                                                with a unique name. Each repository can have one or more branches.
+                                                The main branch — the one where all changes eventually get merged back
+                                                into, and is called master. Everyone uses branches created from master
+                                                to experiment, make edits and additions and changes, before eventually
+                                                rolling that branch back into
+                                                the master once they have been approved and are known to work. Master
+                                                then is updated to contain all the new stuff. <a
+                                                    href="https://www.atlassian.com/git/tutorials/using-branches"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to create a new branch: <small
+                                                    class="text-muted"><code>$ git checkout -b new-feature</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/commit.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Commits</h2>
+                                            <p class="card-text">The git commit command captures a snapshot of the
+                                                project's currently staged changes. Committed snapshots can be thought
+                                                of as “safe” versions of a project—Git will never change them unless you
+                                                explicitly ask it to. Prior to the execution of git commit, The git add
+                                                command is used to promote or 'stage' changes to the project that will
+                                                be stored in a commit. These two commands git commit and git add are two
+                                                of the most frequently used. <a
+                                                    href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to commit to a branch: <small
+                                                    class="text-muted"><code>$git commit -m "commit message"</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/merge.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Merging / Pull Requests</h2>
+                                            <p class="card-text">Merging is Git's way of putting a forked history back
+                                                together again. The git merge command lets you take the independent
+                                                lines of development created by git branch and integrate them into a
+                                                single branch.
+
+                                                Note that all of the commands presented below merge into the current
+                                                branch. The current branch will be updated to reflect the merge, but the
+                                                target branch will be completely unaffected. Again, this means that git
+                                                merge is often used in conjunction with git checkout for selecting the
+                                                current branch and git branch -d for deleting the obsolete target
+                                                branch. <a
+                                                    href="https://www.atlassian.com/git/tutorials/using-branches/git-merge"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to merge a feature branch: <small
+                                                    class="text-muted"><code>$git merge new-feature</code></small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
