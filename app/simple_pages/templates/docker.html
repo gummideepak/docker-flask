@@ -33,18 +33,24 @@
                                     containerisation. Containers are not new, but their use for easily deploying
                                     applications is.
                                     Containerisation is increasingly popular because containers are:
-                                    <ul style="padding-left:5%;list-style-type: disc !important">
-                                        <li style="list-style-type: square;">Flexible: Even the most complex applications can be containerised.</li>
-                                        <li style="list-style-type: square;">Lightweight: Containers leverage and share the host kernel, making them much more
-                                            efficient in terms of system resources than virtual machines.</li>
-                                        <li style="list-style-type: square;">Portable: You can build locally, deploy to the cloud, and run anywhere.</li>
-                                        <li style="list-style-type: square;">Loosely coupled: Containers are highly self sufficient and encapsulated, allowing
-                                            you to replace or upgrade one without disrupting others.</li>
-                                        <li style="list-style-type: square;">Scalable: You can increase and automatically distribute container replicas across a
-                                            datacenter.</li>
-                                        <li style="list-style-type: square;">Secure: Containers apply aggressive constraints and isolations to processes without
-                                            any configuration required on the part of the user.</li>
-                                    </ul>
+                                <ul style="padding-left:5%;list-style-type: disc !important">
+                                    <li style="list-style-type: square;">Flexible: Even the most complex applications
+                                        can be containerised.</li>
+                                    <li style="list-style-type: square;">Lightweight: Containers leverage and share the
+                                        host kernel, making them much more
+                                        efficient in terms of system resources than virtual machines.</li>
+                                    <li style="list-style-type: square;">Portable: You can build locally, deploy to the
+                                        cloud, and run anywhere.</li>
+                                    <li style="list-style-type: square;">Loosely coupled: Containers are highly self
+                                        sufficient and encapsulated, allowing
+                                        you to replace or upgrade one without disrupting others.</li>
+                                    <li style="list-style-type: square;">Scalable: You can increase and automatically
+                                        distribute container replicas across a
+                                        datacenter.</li>
+                                    <li style="list-style-type: square;">Secure: Containers apply aggressive constraints
+                                        and isolations to processes without
+                                        any configuration required on the part of the user.</li>
+                                </ul>
                                 </p>
                         </section>
                         <!-- <section id="areas">
@@ -60,19 +66,19 @@
                             <div class="card" style="background-color:transparent; border-color: #ffcc00;">
                                 <div class="row g-0">
                                     <div class="col-md-2">
-                                        <img src="{{ url_for('static', filename='images/repo.png') }}"
+                                        <img src="{{ url_for('static', filename='images/container.png') }}"
                                             class="img-fluid rounded-start" alt="..." style="background-color: white;">
                                     </div>
                                     <div class="col-md-10">
                                         <div class="card-body">
-                                            <h2 class="card-title big-text">Git Repository</h2>
-                                            <p class="card-text">A Git repository is a virtual storage of your project.
-                                                It allows you to save versions of your code, which you can access when
-                                                needed. To create a new repo, you'll use the git init command. git init
-                                                is a one-time command you use during the initial setup of a new repo.
-                                                Executing this command will create a new .git subdirectory in your
-                                                current working directory. This will also create a new main branch. <a
-                                                    href="https://www.atlassian.com/git/tutorials/setting-up-a-repository"
+                                            <h2 class="card-title big-text">Containers</h2>
+                                            <p class="card-text">Docker Container is a standardised unit which can be
+                                                created on the fly to deploy a particular application or environment. It
+                                                could be an Ubuntu container, CentOs container, etc. to full-fill the
+                                                requirement from an operating system point of view. Also, it could be an
+                                                application oriented container like CakePHP container or a Tomcat-Ubuntu
+                                                container etc. <a
+                                                    href="https://www.docker.com/resources/what-container"
                                                     target="_blank">[Learn More]</a>
                                             </p>
                                             <p class="card-text">Command to commit to a branch: <small
@@ -88,21 +94,21 @@
                             <div class="card" style="background-color:transparent; border-color: #ffcc00;">
                                 <div class="row g-0">
                                     <div class="col-md-2">
-                                        <img src="{{ url_for('static', filename='images/branch.png') }}"
+                                        <img src="{{ url_for('static', filename='images/image.png') }}"
                                             class="img-fluid rounded-start" alt="...">
                                     </div>
                                     <div class="col-md-10">
                                         <div class="card-body">
-                                            <h2 class="card-title big-text">Branches</h2>
-                                            <p class="card-text">A branch is essentially is a unique set of code changes
-                                                with a unique name. Each repository can have one or more branches.
-                                                The main branch — the one where all changes eventually get merged back
-                                                into, and is called master. Everyone uses branches created from master
-                                                to experiment, make edits and additions and changes, before eventually
-                                                rolling that branch back into
-                                                the master once they have been approved and are known to work. Master
-                                                then is updated to contain all the new stuff. <a
-                                                    href="https://www.atlassian.com/git/tutorials/using-branches"
+                                            <h2 class="card-title big-text">Images</h2>
+                                            <p class="card-text">Fundamentally, a container is nothing but a running
+                                                process, with some added encapsulation features applied to it in order
+                                                to keep it isolated from the host and from other containers. One of the
+                                                most important aspects of container isolation is that each container
+                                                interacts with its own, private filesystem; this filesystem is provided
+                                                by a Docker image. An image includes everything needed to run an
+                                                application — the code or binary, runtimes, dependencies, and any other
+                                                filesystem objects required. <a
+                                                    href="https://searchitoperations.techtarget.com/definition/Docker-image"
                                                     target="_blank">[Learn More]</a>
                                             </p>
                                             <p class="card-text">Command to create a new branch: <small
@@ -117,25 +123,75 @@
                         <section style="padding-left: 40px; padding-right: 25px;">
                             <div class="card" style="background-color:transparent; border-color: #ffcc00;">
                                 <div class="row g-0">
-                                    <div class="col-md-2">
-                                        <img src="{{ url_for('static', filename='images/commit.png') }}"
-                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
-                                    </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-12">
                                         <div class="card-body">
-                                            <h2 class="card-title big-text">Commits</h2>
-                                            <p class="card-text">The git commit command captures a snapshot of the
-                                                project's currently staged changes. Committed snapshots can be thought
-                                                of as “safe” versions of a project—Git will never change them unless you
-                                                explicitly ask it to. Prior to the execution of git commit, The git add
-                                                command is used to promote or 'stage' changes to the project that will
-                                                be stored in a commit. These two commands git commit and git add are two
-                                                of the most frequently used. <a
-                                                    href="https://www.atlassian.com/git/tutorials/saving-changes/git-commit"
-                                                    target="_blank">[Learn More]</a>
-                                            </p>
-                                            <p class="card-text">Command to commit to a branch: <small
-                                                    class="text-muted"><code>$git commit -m "commit message"</code></small>
+                                            <h2 class="card-title big-text">Docker Commands</h2>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>1. docker –version
+                                                    This command is used to get the currently installed version of
+                                                    docker</li>
+                                                <li>2. docker pull
+                                                    Usage: docker pull &ltimage name>
+                                                    This command is used to pull images from the docker
+                                                    repository(hub.docker.com)</li>
+                                                <li>3. docker run
+                                                    Usage: docker run -it -d &ltimage name>
+                                                    This command is used to create a container from an image
+                                                <li>
+                                                <li>4. docker ps
+                                                    This command is used to list the running containers
+                                                <li>
+                                                <li>5. docker ps -a
+                                                    This command is used to show all the running and exited containers
+                                                <li>
+                                                <li>6. docker exec
+                                                    Usage: docker exec -it &ltcontainer id> bash
+                                                    This command is used to access the running container
+                                                <li>
+                                                <li>7. docker stop
+                                                    Usage: docker stop &ltcontainer id>
+                                                    This command stops a running container
+                                                <li>
+                                                <li>8. docker kill
+                                                    Usage: docker kill &ltcontainer id>
+                                                    This command kills the container by stopping its execution
+                                                    immediately. The difference between ‘docker kill’ and ‘docker
+                                                    stop’ is that ‘docker stop’ gives the container time to shutdown
+                                                    gracefully, in situations when it is taking too much time for
+                                                    getting the container to stop, one can opt to kill it
+                                                <li>
+                                                <li>9. docker commit
+                                                    Usage: docker commit &ltconatainer id>
+                                                    &ltusername /imagename>
+                                                    This command creates a new image of an edited container on
+                                                    the local system
+                                                <li>
+                                                <li>10. docker login
+                                                    This command is used to login to the docker hub repository
+                                                <li>
+                                                <li>11. docker push
+                                                    Usage: docker push &ltusername /image name>
+                                                    This command is used to push an image to the docker hub
+                                                    repository
+                                                <li>
+                                                <li>12. docker images
+                                                    This command lists all the locally stored docker images
+                                                <li>
+                                                <li>13. docker rm
+                                                    Usage: docker rm &ltcontainer id>
+                                                    This command is used to delete a stopped container
+                                                <li>
+                                                <li>14. docker rmi
+                                                    Usage: docker rmi &ltimage-id>
+                                                    This command is used to delete an image from local storage
+                                                <li>
+                                                <li>15. docker build
+                                                    Usage: docker build &ltpath to docker file>
+                                                    This command is used to build an image from a specified docker
+                                                    file
+                                                <li>
+                                            </ul>
                                             </p>
                                         </div>
                                     </div>
@@ -147,36 +203,43 @@
                             <div class="card" style="background-color:transparent; border-color: #ffcc00;">
                                 <div class="row g-0">
                                     <div class="col-md-2">
-                                        <img src="{{ url_for('static', filename='images/merge.png') }}"
+                                        <img src="{{ url_for('static', filename='images/questionmark.png') }}"
                                             class="img-fluid rounded-start" alt="..." style="background-color: white;">
                                     </div>
                                     <div class="col-md-10">
                                         <div class="card-body">
-                                            <h2 class="card-title big-text">Merging / Pull Requests</h2>
-                                            <p class="card-text">Merging is Git's way of putting a forked history back
-                                                together again. The git merge command lets you take the independent
-                                                lines of development created by git branch and integrate them into a
-                                                single branch.
+                                            <h2 class="card-title big-text">FAQ's</h2>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>1.How to start the project?<br>
+                                                    Ans: From your project directory, start up your application by
+                                                    running docker-compose up.
+                                                </li>
+                                                <li>2.How to access the container with the terminal?<br>Ans: <br>
+                                                    <div style="padding-left: 10px;">
 
-                                                Note that all of the commands presented below merge into the current
-                                                branch. The current branch will be updated to reflect the merge, but the
-                                                target branch will be completely unaffected. Again, this means that git
-                                                merge is often used in conjunction with git checkout for selecting the
-                                                current branch and git branch -d for deleting the obsolete target
-                                                branch. <a
-                                                    href="https://www.atlassian.com/git/tutorials/using-branches/git-merge"
-                                                    target="_blank">[Learn More]</a>
+                                                        STEP 1 : Obtain the container ID by running the following
+                                                        command: docker ps
+                                                        An output similar to the following one is returned:
+                                                        <img src="{{ url_for('static', filename='images/dockerps.png') }}"
+                                                            class="img-fluid rounded-start" alt="..."
+                                                            style="background-color: white;"><br>
+                                                        STEP 2: Access the Docker container by running the following
+                                                        command: docker exec -it <container_id> /bin/bash
+                                                            Where
+
+                                                            container_id
+                                                            Is the ID of the container obtained with the command
+                                                            explained in the first step, for example b02459af2b9c.
+                                                    </div>
+                                                </li>
+                                            </ul>
                                             </p>
-                                            <p class="card-text">Command to merge a feature branch: <small
-                                                    class="text-muted"><code>$git merge new-feature</code></small></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
-                        <br />
-
-
                     </div>
                 </div>
             </div>

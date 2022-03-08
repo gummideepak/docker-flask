@@ -1,4 +1,154 @@
 {% extends "base.html" %}
 {% block content %}
+<br>
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-7">
+                                <h1>Introduction to Python &amp; Flask</h1>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <section>
+                            <div>
+                                <p>
+                                    Flask is a web application framework written in Python. It is developed by Armin
+                                    Ronacher, who leads an international group of Python enthusiasts named Pocco. Flask
+                                    is based on the Werkzeug WSGI toolkit and Jinja2 template engine. Both are Pocco
+                                    projects.
+                                </p>
+                                <p>
+                                    WSGI:
+                                    Web Server Gateway Interface (WSGI) has been adopted as a standard for Python web
+                                    application development. WSGI is a specification for a universal interface between
+                                    the web server and the web applications.<br><br>
 
+                                    Werkzeug:
+                                    It is a WSGI toolkit, which implements requests, response objects, and other utility
+                                    functions. This enables building a web framework on top of it. The Flask framework
+                                    uses Werkzeug as one of its bases.<br><br>
+
+                                    Jinja2:
+                                    Jinja2 is a popular templating engine for Python. A web templating system combines a
+                                    template with a certain data source to render dynamic web pages.<br><br>
+
+                                    Flask is often referred to as a micro framework. It aims to keep the core of an
+                                    application simple yet extensible. Flask does not have built-in abstraction layer
+                                    for database handling, nor does it have form a validation support. Instead, Flask
+                                    supports the extensions to add such functionality to the application. Some of the
+                                    popular Flask extensions are discussed later in the tutorial.
+                                </p>
+                        </section>
+                        <!-- <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section> -->
+                        <br>
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <!-- <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/repo.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div> -->
+                                <div class="col-md-12">
+                                    <div class="card-body">
+                                        <h2 class="card-title big-text">PyTest </h2>
+                                        <p class="card-text">Testing your code brings a wide variety of benefits. It
+                                            increases your confidence that the code behaves as you expect and
+                                            ensures that changes to your code won’t cause regressions. Writing and
+                                            maintaining tests is hard work, so you should leverage all the tools at
+                                            your disposal to make it as painless as possible. pytest is one of the
+                                            best tools you can use to boost your testing productivity. <a
+                                                href="https://realpython.com/pytest-python-testing/"
+                                                target="_blank">[Learn More]</a>
+                                        </p>
+                                        <p>
+                                            We use PyTest in our project to verify if all the page response codes
+                                            are 200 (Response OK). We also make sure the content in the webpage is
+                                            loading without any error. Below you can see that we fetch /docker page and
+                                            check that the response status code is 200 & we also check the data loaded
+                                            in the webpage.
+                                        </p>
+                                        <pre>
+                                            <code>
+                                                def test_request_docker(client):
+                                                response = client.get("/docker")
+                                                assert response.status_code == 200
+                                                assert b"Introduction to Docker" in response.data
+                                            </code>
+                                    </pre>
+                                    </div>
+                                    <p class="card-text">
+                                        <a href="https://github.com/gummideepak/is601-githubintro"
+                                            target="_blank">[Flask Into Project On GitHub]</a>
+                                        <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank">[Flask
+                                            Documentation]</a>
+                                        <a href="https://flask.palletsprojects.com/en/2.0.x/testing/"
+                                            target="_blank">[Flask Testing with PyTest]</a>
+                                    </p>
+                                    <br>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text"><a
+                                                    href="https://github.com/gummideepak/docker-flask"
+                                                    target="_blank">[Project]</a> Structure</h2>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>Project Root
+                                                    <ul>
+                                                        <li>.github\workflows --> All the yml files which are used to
+                                                            Auto Builds and Auto Deploy code on certain actions.
+                                                        </li>
+                                                        <br>
+                                                        <li>app --> Contains the main application.
+                                                            <ul>
+                                                                <li>Simple_pages\templates --> Contains the html pages.
+                                                                </li>
+                                                                <li>Static --> Contains all the static resources like
+                                                                    css, js and images.</li>
+                                                            </ul>
+                                                        </li>
+                                                        <br>
+                                                        <li>tests --> Contains all the unit tests for the project</li>
+                                                        <li>Docekrfile --> This is the docker file which is used by the docker engine.</li>
+                                                        <li>docker-compose.yml --> This is an orchestration file that makes spinning up multi-container distributed applications with Docker an effortless task.</li>
+                                                        <li>heroku.yml -->  heroku configuration</li>
+                                                        <li>requirements.txt --> All the packages that will be installed in the container.</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

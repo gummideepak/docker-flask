@@ -298,7 +298,7 @@ ul li {
   font-size: 15px;
   list-style-type: none;
   list-style-position: outside;
-  max-width: 560px;
+  /* max-width: 560px; */
   line-height: 150%;
 }
 
@@ -377,4 +377,14 @@ ul li .dates {
 .big-text {
    font-size: 25px;
 }
+
+pre{
+   font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+   margin-bottom: 10px;
+   overflow: auto;
+   width: auto;
+   padding: 5px;
+   background-color: #eee;
+   max-height: 600px;
+ }
 
