@@ -31,9 +31,9 @@ def test_request_python(client):
     assert response.status_code == 200
     assert b"Python & Flask" in response.data
 
-def test_request_cicd(client):
+def test_request_githubactions(client):
     """This makes the index page"""
-    response = client.get("/cicd")
+    response = client.get("/githubactions")
     assert response.status_code == 200
     assert b"GitHub Actions" in response.data
 
