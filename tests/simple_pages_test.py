@@ -17,13 +17,25 @@ def test_request_git(client):
     """This makes the index page"""
     response = client.get("/git")
     assert response.status_code == 200
-    assert b"Introduction to GIT" in response.data
+    assert b" GIT" in response.data
 
 def test_request_docker(client):
     """This makes the index page"""
     response = client.get("/docker")
     assert response.status_code == 200
-    assert b"Introduction to Docker" in response.data
+    assert b"Docker" in response.data
+
+def test_request_python(client):
+    """This makes the index page"""
+    response = client.get("/python")
+    assert response.status_code == 200
+    assert b"Python & Flask" in response.data
+
+def test_request_cicd(client):
+    """This makes the index page"""
+    response = client.get("/cicd")
+    assert response.status_code == 200
+    assert b"GitHub Actions" in response.data
 
 # def test_request_page2(client):
 #     """This makes the index page"""
