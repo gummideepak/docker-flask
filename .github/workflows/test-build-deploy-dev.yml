@@ -1,4 +1,4 @@
-name: [DEV] Run Tests, Build Dockerfile, Run on Heroku
+name: Run Tests, Build Dockerfile, Run on Heroku Dev
 
 on:
   pull_request:
@@ -53,6 +53,6 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "docker-flask-dev-dg67" #Must be unique in Heroku
+          heroku_app_name: "docker-flask-dg67" #Must be unique in Heroku
           heroku_email: "dg67@njit.edu"
           usedocker: true
