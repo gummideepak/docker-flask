@@ -5,7 +5,7 @@ def test_request_index(client):
     """This makes the index page"""
     response = client.get("/")
     assert response.status_code == 200
-    assert b"Lorem ipsum" in response.data
+    assert b"introduction" in response.data
 
 # def test_request_about(client):
 #     """This makes the index page"""
@@ -13,11 +13,29 @@ def test_request_index(client):
 #     assert response.status_code == 200
 #     assert b"About Page" in response.data
 
-def test_request_page1(client):
+def test_request_git(client):
     """This makes the index page"""
-    response = client.get("/page1")
+    response = client.get("/git")
     assert response.status_code == 200
-    assert b"Header" in response.data
+    assert b" GIT" in response.data
+
+def test_request_docker(client):
+    """This makes the index page"""
+    response = client.get("/docker")
+    assert response.status_code == 200
+    assert b"Docker" in response.data
+
+def test_request_python(client):
+    """This makes the index page"""
+    response = client.get("/python")
+    assert response.status_code == 200
+    assert b"Python" in response.data
+
+def test_request_githubactions(client):
+    """This makes the index page"""
+    response = client.get("/githubactions")
+    assert response.status_code == 200
+    assert b"GitHub Actions" in response.data
 
 # def test_request_page2(client):
 #     """This makes the index page"""

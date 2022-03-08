@@ -1,83 +1,215 @@
 {% extends "base.html" %}
 {% block content %}
-<!-- <div class="row">
-    <div class="container">
-        <div class="hero hero-home">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec vulputate justo, id &amp; augue.</p>
-
-            <a href="" class="btn beige" title="Get In Touch">Signup now</a>
-        </div><!-- /.hero hero-home -->
-    </div><!-- /.container -->
-</div> -->
-<div class="content" style="padding-top: 5%;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="{{ url_for('static', filename='images/zlayout.svg') }}" alt="Image" class="img-fluid"
-                    data-pagespeed-url-hash="4289692523"
-                    onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+<div class="row">
+    <div class="col-12">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
             </div>
-            <div class="col-md-6 contents">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="mb-4">
-                            <h3>Sign In</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
-                                adipisicing.</p>
-                        </div>
-                        <form action="#" method="post">
-                            <div class="form-group first">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="/git">
+                        <img src="{{ url_for('static', filename='images/github.png') }}" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/docker">
+                        <img src="{{ url_for('static', filename='images/docker.png') }}" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/python">
+                        <img src="{{ url_for('static', filename='images/python.png') }}" class="d-block w-100">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/cicd"><img src="{{ url_for('static', filename='images/cicd.png') }}"
+                            class="d-block w-100"></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>
+<!-- <div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content">  
+                <h1>Afonso Praça | Senior Software Developer</h1>
+                <section>
+                    <div>
+                        <p>Afonso started working as developer around 2005, as a freelancer developer. In 2009 he began
+                            working as lead developer at Caos! Design, becoming later a partner of the business. Since 2012
+                            works as a software developer of VTEX - Commerce Platform, working mostly in front end of the
+                            administration area of the apps, using Node.js and AngularJS.</p>
+                    </div>
+                </section>
+                <section id="areas">
+                    <h2>skills and expertise</h2>
+                    <ul>
+                        <li>Javascript, HTML, CSS, Go,<br />
+                            AngularJS, Node.js, Express, JQuery, GIT,<br />
+                            E-Commerce, Project Management, Software Architecture
+                    </ul>
+                </section>
+                <section id="experiencia">
+                    <h2>experience</h2>
+                    <ul>
+                        <li>
+                            <a href="http://www.vtex.com/" target="_blank">VTEX</a> -> Senior Software Developer [Team Lead]
+                            <br /><span class="dates">[July 2012 – Present]</span>
+                        </li>
+                        <li>
+                            <a href="http://caosdesign.com.br/" target="_blank">Caos! Design</a> -> Business Partner and
+                            Tech Lead
+                            <br /><span class="dates">[June 2009 – June 2012]</span>
+                        </li>
+                        <li>
+                            <a href="http://www.ceperj.rj.gov.br/" target="_blank">Ceperj</a> -> System Administrator
+                            <br /><span class="dates">[May 2008 – May 2009]</span><br /><br />
+                        </li>
+                        <li>
+                            <a href="afonso-praca-resume.pdf" target="_blank">curriculum</a> <span
+                                class="dates">[PDF]</span>
+                        </li>
+                    </ul>
+                </section>
+                <section id="education">
+                    <h2>education</h2>
+                    <ul>
+                        <li><a href="http://bsi.uniriotec.br/" target="_blank">Universidade Federal do Estado do Rio de
+                                Janeiro</a>
+                            <br /><span>Bachelor of Science (BS), Computer Information Systems</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><a href="http://www.cursosenairio.com.br/" target="_blank">SENAI - RJ</a>
+                            <br /><span>Technology Course, Computer Networks</span>
+                        </li>
+                    </ul>
+                </section>
+                <section id="contatos">
+                    <h2>contacts</h2>
+                    <ul>
+                        <li>+55 21 979.151515</li>
+                        <li>afonsoinfo@gmail.com</li>
+                        <li>
+                            <a href="http://www.linkedin.com/in/afonsopraca" target="_blank">[linkedin]</a>
+                            <a href="https://github.com/afonso-praca" target="_blank">[github]</a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-6">
+                        <section>
+                            <h1>introduction</h1>
+                            <div>
+                                <p>
+                                    I am pursuing my master’s degree in Computer Science at NJIT and will be graduating
+                                    in May 2022. I am currently working as a Research Assistant at NJIT, where I
+                                    developed web applications for the New York Metropolitan Transportation Council.
+
+                                </p>
+                                <p>I previously worked as a Full-Stack developer at EPAM Systems, where I worked on
+                                    different technologies like Angular, C#, Java, SQL on the Azure Cloud. It was a
+                                    fantastic opportunity for me to demonstrate my abilities to some of the top minds in
+                                    the industry while also receiving feedback, which helped me become a more effective
+                                    mentor for the Junior Engineers who joined the team. I was promoted to Senior
+                                    Engineer within a year for my outstanding contribution to the company, and I
+                                    received an award for being a critical resource to the team. It was a significant
+                                    achievement as I was one of the few employees to receive a promotion this early.</p>
+                                <!-- <p>Afonso started working as developer around 2005, as a freelancer developer. In 2009
+                                    he began
+                                    working as lead developer at Caos! Design, becoming later a partner of the business.
+                                    Since 2012
+                                    works as a software developer of VTEX - Commerce Platform, working mostly in front
+                                    end of the
+                                    administration area of the apps, using Node.js and AngularJS.</p> -->
                             </div>
-                            <div class="form-group last mb-4">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" id="password">
-                            </div>
-                            <div class="d-flex mb-5 align-items-center">
-                                <label class="control control--checkbox mb-0"><span class="caption">Remember
-                                        me</span>
-                                    <input type="checkbox" checked="">
-                                    <div class="control__indicator"></div>
-                                </label>
-                                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>
-                            </div>
-                            <input type="submit" value="Log In" class="btn btn-block btn-primary">
-                            <span class="d-block text-left my-4 text-muted">— or login with —</span>
-                            <div class="social-login">
-                                <a href="#" class="facebook">
-                                    <span class="icon-facebook mr-3"></span>
-                                </a>
-                                <a href="#" class="twitter">
-                                    <span class="icon-twitter mr-3"></span>
-                                </a>
-                                <a href="#" class="google">
-                                    <span class="icon-google mr-3"></span>
-                                </a>
-                            </div>
-                        </form>
+                        </section>
+                        <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section>
+
+                    </div>
+                    <div class="col-6">
+                        <section id="experiencia">
+                            <h1>experience</h1>
+                            <ul>
+                                <li>
+                                    <a href="https://www.njit.edu/" target="_blank">NJIT</a> -> Research Assistant
+                                    <br /><span class="dates">[May 2021 – Present]</span>
+                                </li>
+                                <li>
+                                    <a href="https://www.epam.com/" target="_blank">EPAM Systems</a> -> Full Stack
+                                    Developer
+                                    <br /><span class="dates">[June 2018 – January 2021]</span>
+                                </li>
+
+                            </ul>
+                        </section>
+                        <section id="education">
+                            <h1>education</h1>
+                            <ul>
+                                <li><a href="https://www.njit.edu/" target="_blank">New Jersey Institute of
+                                        Technology</a>
+                                    <br /><span>Master's in Computer Science (MS)</span>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li><a href="https://jntuh.ac.in/" target="_blank">Jawaharlal Nehru Technological
+                                        University Hyderabad
+                                    </a>
+                                    <br /><span>Bachelor of Technology (BTech), Computer Science</span>
+                                </li>
+                            </ul>
+                        </section>
+                        <section id="contatos">
+                            <h1>contacts</h1>
+                            <ul>
+                                <li>+1 (516) 862-8477</li>
+                                <li>gummideepak@gmail.com</li>
+                                <li>
+                                    <a href="http://www.linkedin.com/in/gummideepak" target="_blank">[linkedin]</a>
+                                    <a href="https://github.com/gummideepak" target="_blank">[github]</a>
+                                    <a href="deepak_resume.pdf" target="_blank">[Resume]</a> <span
+                                        class="dates">[PDF]</span>
+                                </li>
+                            </ul>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div id="intro" class="view">
-    <div class="mask">
-    </div>
-</div>
-<div class="container">
-    <h1>Terms and Conditions</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec vulputate justo, id tristique augue. Duis sodales aliquet neque, et vehicula ante. Cras tristique erat at quam gravida varius. Morbi aliquet consectetur tellus, eget lacinia sem sollicitudin ut. Donec eu justo eu enim cursus aliquet. Ut suscipit massa ac libero mollis, a hendrerit nibh congue. Cras sed mi at quam dictum hendrerit. Donec at pretium lorem. Aenean quis aliquam neque.
-    </p>
-    <p>Morbi ultrices nulla vel facilisis pharetra. Etiam vel magna sed purus sodales hendrerit a vitae lectus. Etiam luctus est scelerisque maximus iaculis. Phasellus sollicitudin, enim ac fringilla lacinia, erat quam luctus lectus, sit amet scelerisque sem leo a neque. Praesent tincidunt libero vitae placerat vestibulum. Etiam vel lectus id ante tincidunt elementum sit amet id turpis. Donec at luctus est. Cras a porta dui, at luctus felis. Nullam suscipit ex ac enim mollis placerat. Morbi ante leo, semper vel rutrum vitae, vulputate nec felis. Integer gravida aliquam quam, a malesuada enim mollis vitae. Mauris ut ex sit amet diam ultricies porttitor. Aenean blandit fringilla augue a blandit. Nulla rhoncus fringilla neque, id sollicitudin nibh faucibus non. Vestibulum bibendum sem augue, sit amet dapibus mi efficitur et. Curabitur ultrices porttitor pellentesque.
-    </p>
-    <p>Etiam euismod tristique suscipit. Fusce mollis eget libero efficitur dapibus. Sed egestas nisi at fringilla iaculis. Integer nec molestie sapien. Praesent mollis, felis euismod porta lacinia, turpis risus ultricies quam, eu pharetra diam dolor et odio. Aliquam feugiat tortor at mi iaculis, sed dapibus magna dictum. Integer sed cursus leo. Praesent ut ligula lectus. Nam ut odio dolor. Aenean aliquam commodo velit, a molestie augue pretium a. Sed venenatis nec nisl nec vulputate.
-    </p>
-    <p>Etiam vel lorem sollicitudin, accumsan lacus ac, gravida diam. Duis mollis cursus lorem vitae feugiat. Aenean a nisi aliquam, posuere metus vel, hendrerit est. Phasellus egestas sem eu sapien dapibus, at dictum lacus sollicitudin. Donec facilisis odio eu feugiat rutrum. Pellentesque felis nisl, maximus ut tellus eu, sollicitudin bibendum velit. Suspendisse euismod, metus a lacinia tincidunt, diam sapien elementum dolor, euismod mattis eros sem eget velit.
-    </p>
-    <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla consectetur rutrum quam eget malesuada. Donec mattis libero ex, a lacinia lorem volutpat et. Ut quis ligula varius, luctus nibh nec, auctor quam. Mauris pretium id ante eu tincidunt. Mauris aliquam rhoncus odio, eget consequat augue condimentum in. Etiam libero sapien, varius ut cursus nec, ornare pharetra nibh. Etiam sed augue augue. Integer quis suscipit odio, vitae aliquet risus. Pellentesque laoreet ipsum id venenatis aliquam. Nunc varius tortor at sem congue rutrum. Nunc mollis nunc vel mollis condimentum. Fusce suscipit et nunc luctus varius.
-    </p>
 </div>
 {% endblock %}

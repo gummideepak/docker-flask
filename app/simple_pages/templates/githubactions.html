@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col-4">
+                                <h1>GitHub Actions</h1>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <section>
+                            <div>
+                                <p>
+                                    GitHub Actions is a continuous integration and continuous delivery (CI/CD) platform
+                                    that allows you to automate your build, test, and deployment pipeline. You can
+                                    create workflows that build and test every pull request to your repository, or
+                                    deploy merged pull requests to production.
+                                </p>
+                                <p>
+                                    GitHub Actions goes beyond just DevOps and lets you run workflows when other events
+                                    happen in your repository. For example, you can run a workflow to automatically add
+                                    the appropriate labels whenever someone creates a new issue in your
+                                    repository.GitHub provides Linux, Windows, and macOS virtual machines to run your
+                                    workflows, or
+                                    you can host your own self-hosted runners in your own data center or cloud
+                                    infrastructure.
+                                </p>
+                        </section>
+                        <!-- <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section> -->
+                        <br>
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Continuous Integration &amp; It's benifits.
+                                            </h2>
+                                            <p class="card-text">
+                                                Continuous integration (CI) is the practice of automating the
+                                                integration of code changes from multiple contributors into a single
+                                                software project. It’s a primary DevOps best practice, allowing
+                                                developers to frequently merge code changes into a central repository
+                                                where builds and tests then run. Automated tools are used to assert the
+                                                new code’s correctness before integration.
+                                            </p>
+                                            <p class="card-text">
+                                                Continuous Integrations doesn't get rid of bugs, but it
+                                                does make them dramatically easier to find and remove. In this respect
+                                                it's rather like self-testing code. If you introduce a bug and detect it
+                                                quickly it's far easier to get rid of. Since you've only changed a small
+                                                bit of the system, you don't have far to look.
+                                            </p>
+                                            <p class="card-text">
+                                                If you have continuous integration, it removes one of the biggest
+                                                barriers to frequent deployment. Frequent deployment is valuable because
+                                                it allows your users to get new features more rapidly, to give more
+                                                rapid feedback on those features, and generally become more
+                                                collaborative in the development cycle. This helps break down the
+                                                barriers between customers and development - barriers.
+                                                <a href="https://www.martinfowler.com/articles/continuousIntegration.html"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Continuous Deployment &amp; It's benifits.
+                                            </h2>
+                                            <p class="card-text">
+                                                Continuous Deployment (CD) is a software release process that uses
+                                                automated testing to validate if changes to a codebase are correct and
+                                                stable for immediate autonomous deployment to a production environment.
+                                            </p>
+                                            <p class="card-text">
+                                                Continuous Delivery is sometimes confused with Continuous Deployment. Continuous Deployment means that every change goes through the pipeline and automatically gets put into production, resulting in many production deployments every day. Continuous Delivery just means that you are able to do frequent deployments but may choose not to do it, usually due to businesses preferring a slower rate of deployment. In order to do Continuous Deployment you must be doing Continuous Delivery.
+                                            </p>
+                                            <p class="card-text">
+                                                User feedback does require you to be doing continuous deployment. If you want that, but don't fancy getting new software to your entire user base, you can deploy to a subset of users. In a recent project of ours, a retailer deployed its new online system first to its employees, then to an invited set of premium customers, and finally to all customers.
+                                                <a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Steps to use GitHub Actions to enable CI/CD.</h2>
+                                            <p class="card-text"><ul>
+                                                <li>1. Create a .github/workflows directory in your repository on GitHub if this directory does not already exist.</li>
+
+                                                <li>2. In the .github/workflows directory, create a file named github-actions-demo.yml.
+                                                    <a
+                                                    href="https://github.com/gummideepak/docker-flask/blob/master/.github/workflows/test-build-deploy.yml"
+                                                    target="_blank">[Link to a sample file]</a>
+                                                </li>
+                                                <li>3. You can configure all the triggers, build steps and deployment steps in the yml file.</li>
+                                                <li>4. Once you are done github automatically picks up the yml file and execute if the trigger is satisfied.</li>
+                                                <li>5. You can check the workflow output <a
+                                                    href="https://github.com/gummideepak/docker-flask/actions"
+                                                    target="_blank">[here]</a>.</li>
+                                            </ul>
+                                            </p>
+                                            <p class="card-text">Command to create a new branch: <small
+                                                    class="text-muted"><code>$ git checkout -b new-feature</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

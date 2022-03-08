@@ -1,0 +1,249 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-5"></div>
+                            <div class="col-2">
+                                <h1>Docker</h1>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <section>
+                            <div>
+                                <p>
+                                    Docker is a set of platform as a service products that use OS-level virtualisation
+                                    to deliver software in packages called containers. Containers are isolated from one
+                                    another and bundle their own software, libraries and configuration files; they can
+                                    communicate with each other through well-defined channels. All containers are run by
+                                    a single <a href="https://en.wikipedia.org/wiki/Kernel_(operating_system)"
+                                        target="_blank">operating-system kernel</a> and are thus more lightweight than
+                                    <a href="https://en.wikipedia.org/wiki/Virtual_machine" target="_blank">virtual
+                                        machines</a>.
+                                </p>
+                                <p>
+                                    Docker is a platform for developers and sysadmins to build, share, and run
+                                    applications with containers. The use of containers to deploy applications is called
+                                    containerisation. Containers are not new, but their use for easily deploying
+                                    applications is.
+                                    Containerisation is increasingly popular because containers are:
+                                <ul style="padding-left:5%;list-style-type: disc !important">
+                                    <li style="list-style-type: square;">Flexible: Even the most complex applications
+                                        can be containerised.</li>
+                                    <li style="list-style-type: square;">Lightweight: Containers leverage and share the
+                                        host kernel, making them much more
+                                        efficient in terms of system resources than virtual machines.</li>
+                                    <li style="list-style-type: square;">Portable: You can build locally, deploy to the
+                                        cloud, and run anywhere.</li>
+                                    <li style="list-style-type: square;">Loosely coupled: Containers are highly self
+                                        sufficient and encapsulated, allowing
+                                        you to replace or upgrade one without disrupting others.</li>
+                                    <li style="list-style-type: square;">Scalable: You can increase and automatically
+                                        distribute container replicas across a
+                                        datacenter.</li>
+                                    <li style="list-style-type: square;">Secure: Containers apply aggressive constraints
+                                        and isolations to processes without
+                                        any configuration required on the part of the user.</li>
+                                </ul>
+                                </p>
+                        </section>
+                        <!-- <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section> -->
+                        <br>
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/container.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Containers</h2>
+                                            <p class="card-text">Docker Container is a standardised unit which can be
+                                                created on the fly to deploy a particular application or environment. It
+                                                could be an Ubuntu container, CentOs container, etc. to full-fill the
+                                                requirement from an operating system point of view. Also, it could be an
+                                                application oriented container like CakePHP container or a Tomcat-Ubuntu
+                                                container etc. <a
+                                                    href="https://www.docker.com/resources/what-container"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to commit to a branch: <small
+                                                    class="text-muted"><code>$git init &ltproject directory&gt"</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/image.png') }}"
+                                            class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Images</h2>
+                                            <p class="card-text">Fundamentally, a container is nothing but a running
+                                                process, with some added encapsulation features applied to it in order
+                                                to keep it isolated from the host and from other containers. One of the
+                                                most important aspects of container isolation is that each container
+                                                interacts with its own, private filesystem; this filesystem is provided
+                                                by a Docker image. An image includes everything needed to run an
+                                                application — the code or binary, runtimes, dependencies, and any other
+                                                filesystem objects required. <a
+                                                    href="https://searchitoperations.techtarget.com/definition/Docker-image"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                            <p class="card-text">Command to create a new branch: <small
+                                                    class="text-muted"><code>$ git checkout -b new-feature</code></small>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Docker Commands</h2>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>1. docker –version
+                                                    This command is used to get the currently installed version of
+                                                    docker</li>
+                                                <li>2. docker pull
+                                                    Usage: docker pull &ltimage name>
+                                                    This command is used to pull images from the docker
+                                                    repository(hub.docker.com)</li>
+                                                <li>3. docker run
+                                                    Usage: docker run -it -d &ltimage name>
+                                                    This command is used to create a container from an image
+                                                <li>
+                                                <li>4. docker ps
+                                                    This command is used to list the running containers
+                                                <li>
+                                                <li>5. docker ps -a
+                                                    This command is used to show all the running and exited containers
+                                                <li>
+                                                <li>6. docker exec
+                                                    Usage: docker exec -it &ltcontainer id> bash
+                                                    This command is used to access the running container
+                                                <li>
+                                                <li>7. docker stop
+                                                    Usage: docker stop &ltcontainer id>
+                                                    This command stops a running container
+                                                <li>
+                                                <li>8. docker kill
+                                                    Usage: docker kill &ltcontainer id>
+                                                    This command kills the container by stopping its execution
+                                                    immediately. The difference between ‘docker kill’ and ‘docker
+                                                    stop’ is that ‘docker stop’ gives the container time to shutdown
+                                                    gracefully, in situations when it is taking too much time for
+                                                    getting the container to stop, one can opt to kill it
+                                                <li>
+                                                <li>9. docker commit
+                                                    Usage: docker commit &ltconatainer id>
+                                                    &ltusername /imagename>
+                                                    This command creates a new image of an edited container on
+                                                    the local system
+                                                <li>
+                                                <li>10. docker login
+                                                    This command is used to login to the docker hub repository
+                                                <li>
+                                                <li>11. docker push
+                                                    Usage: docker push &ltusername /image name>
+                                                    This command is used to push an image to the docker hub
+                                                    repository
+                                                <li>
+                                                <li>12. docker images
+                                                    This command lists all the locally stored docker images
+                                                <li>
+                                                <li>13. docker rm
+                                                    Usage: docker rm &ltcontainer id>
+                                                    This command is used to delete a stopped container
+                                                <li>
+                                                <li>14. docker rmi
+                                                    Usage: docker rmi &ltimage-id>
+                                                    This command is used to delete an image from local storage
+                                                <li>
+                                                <li>15. docker build
+                                                    Usage: docker build &ltpath to docker file>
+                                                    This command is used to build an image from a specified docker
+                                                    file
+                                                <li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-2">
+                                        <img src="{{ url_for('static', filename='images/questionmark.png') }}"
+                                            class="img-fluid rounded-start" alt="..." style="background-color: white;">
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">FAQ's</h2>
+                                            <p class="card-text">
+                                            <ul>
+                                                <li>1.How to start the project?<br>
+                                                    Ans: From your project directory, start up your application by
+                                                    running docker-compose up.
+                                                </li>
+                                                <li>2.How to access the container with the terminal?<br>Ans: <br>
+                                                    <div style="padding-left: 10px;">
+
+                                                        STEP 1 : Obtain the container ID by running the following
+                                                        command: docker ps
+                                                        An output similar to the following one is returned:
+                                                        <img src="{{ url_for('static', filename='images/dockerps.png') }}"
+                                                            class="img-fluid rounded-start" alt="..."
+                                                            style="background-color: white;"><br>
+                                                        STEP 2: Access the Docker container by running the following
+                                                        command: docker exec -it <container_id> /bin/bash
+                                                            Where
+
+                                                            container_id
+                                                            Is the ID of the container obtained with the command
+                                                            explained in the first step, for example b02459af2b9c.
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,11 +1,9 @@
-name: Run Tests, Build Dockerfile, Run on Heroku Prod
+name: Run Tests, Build Dockerfile, Run on Heroku Dev
 
 on:
-  push:
+  pull_request:
     branches:
       - 'master'
-    tags:
-      - 'v*'
 
 jobs:
   runtest:
@@ -39,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: dg67/docker-flask
+          images: dg67/docker-flask-dev
 
       - name: Build and push
         uses: docker/build-push-action@v2
