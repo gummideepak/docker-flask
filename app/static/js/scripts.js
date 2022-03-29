@@ -1,19 +1,19 @@
-(function(){
+(function () {
 
 	var imagesList = ["birds1.jpg", "birds2.jpg", "birds3.jpg", "birds4.jpg", "birds5.jpg", "birds6.jpg"];
 
-	function init () {
+	function init() {
 		loadImg();
 	}
 
-	function loadImg(){
+	function loadImg() {
 		var img = new Image();
 
-		img.onload = function() {
+		img.onload = function () {
 			animaInit();
 		};
 
-		img.onerror = function() {
+		img.onerror = function () {
 			console.log("erro no carregamento da imagem");
 			animaInit();
 		};
@@ -23,42 +23,48 @@
 		$("#img-container").attr("src", img.src);
 	}
 
-	function animaInit(){
+	function animaInit() {
 		posImg();
 		addListeners();
-		$('#wrapper').fadeTo(600, 1, function(){
+		$('#wrapper').fadeTo(600, 1, function () {
 			$('#content').delay(200).fadeTo(600, 1);
 		});
 	}
 
 	//set size of bg image
-	function posImg(){
+	function posImg() {
 		var $img_bg = $('#bg img');
 		var a = ($(window).width() / $img_bg.width()) * 1.1;
-		var b = ($(window).height()/ $img_bg.height()) * 1.1;
+		var b = ($(window).height() / $img_bg.height()) * 1.1;
 		var c = Math.max(a, b);
 
-		$img_bg.width($img_bg.width()*c);
-		$img_bg.height($img_bg.height()*c);
+		$img_bg.width($img_bg.width() * c);
+		$img_bg.height($img_bg.height() * c);
 	}
 
 	//add HTMLListeners
-	function addListeners(){
-		$(window).resize(function(){
+	function addListeners() {
+		$(window).resize(function () {
 			posImg();
 		});
 
 		$('#projetos li, #contatos a')
-			.on("mouseover", function(){
+			.on("mouseover", function () {
 				$(this).siblings().stop().animate({ opacity: '0.6' }, 300);
 			})
-			.on("mouseout", function(){
+			.on("mouseout", function () {
 				$(this).siblings().stop().animate({ opacity: '1' }, 400);
-		});
+			});
+		$(".nav a")
+			.on("click", function () {
+				$(".nav").find(".active").removeClass("active");
+				$(this).parent().addClass("active");
+			});
+
 	}
 
 	// on document ready
-	$(document).ready(function(){
+	$(document).ready(function () {
 		init();
 	});
 

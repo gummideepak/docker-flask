@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div class="row">
+    <div class="col-12">
+        <div id="wrapper">
+            <div id="content" style="width:auto !important ; max-width: 100% !important;">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-9">
+                                <h1>Arrange Act Assert Testing Pattern</h1>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <section>
+                            <div>
+                                <p>
+                                    The AAA (Arrange-Act-Assert) pattern has become almost a standard across the
+                                    industry. It suggests that you should divide your test method into three sections:
+                                    arrange, act and assert. Each one of them only responsible for the part in which
+                                    they are named after.
+                                </p>
+                                <p>
+                                    So the arrange section you only have code required to setup that specific test. Here
+                                    objects would be created, mocks setup (if you are using one) and potentially
+                                    expectations would be set. Then there is the Act, which should be the invocation of
+                                    the method being tested. And on Assert you would simply check whether the
+                                    expectations were met.
+                                </p>
+                        </section>
+                        <!-- <section id="areas">
+                            <h1>skills and expertise</h1>
+                            <ul>
+                                <li>Javascript, HTML, CSS, Python,<br />
+                                    AngularJS, Node.js, Java, Spring Framework, JQuery, GIT, <br />
+                                    SQL Server, Docker, Azure DevOps
+                            </ul>
+                        </section> -->
+                        <br>
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Arrange
+                                            </h2>
+                                            <p class="card-text">
+                                                The block of code that sets up the conditions for the test action.
+                                            </p>
+                                            <p class="card-text">
+                                                Guidelines
+                                            <ul>
+                                                <li>1. Use a single block of code with no empty lines.</li>
+                                                <li>2. Do not use assert in the Arrange block. If you need to make an
+                                                    assertion
+                                                    about your arrangement, then this is a smell that your arrangement
+                                                    is
+                                                    too complicated and should be extracted to a fixture or setup
+                                                    function
+                                                    and tested in its own right.</li>
+                                                <li>3. Only prepare non-deterministic results not available after
+                                                    action.</li>
+                                            </ul>
+                                            </p>
+                                            <p class="card-text">
+                                                <a href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Act
+                                            </h2>
+                                            <p class="card-text">
+                                                The line of code where the Action is taken on the SUT.
+                                            </p>
+                                            <p class="card-text">
+                                                Guidelines
+                                                <br>
+                                                <br>
+                                                1. Start every Action line with result =.
+                                                <br>
+                                                2. This makes it easier to distinguish test actions and means you can
+                                                avoid
+                                                the hardest job in programming: naming. When every result is called
+                                                result, then you do not need to waste brain power wondering if it should
+                                                be item = or response = etc. An added benefit is that you can find test
+                                                actions easily with a tool like grep.
+                                                <br>
+                                                3. Even when there is no result from the action, capture it with result
+                                                =
+                                                and then assert result is None. In this way, the SUT’s behaviour is
+                                                pinned.
+                                                <br>
+                                                4. If you struggle to write a single line action, then consider
+                                                extracting
+                                                some of that code into your arrangement.
+                                                <br>
+                                                5. The action can be wrapped in with ... raises for expected exceptions.
+                                                In
+                                                this case your action will be two lines surrounded by empty lines.
+                                                <br>
+                                            </p>
+                                            <p class="card-text">
+                                                <a href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+                        <section style="padding-left: 40px; padding-right: 25px;">
+                            <div class="card" style="background-color:transparent; border-color: #ffcc00;">
+                                <div class="row g-0">
+                                    <div class="col-md-12">
+                                        <div class="card-body">
+                                            <h2 class="card-title big-text">Assert
+                                            </h2>
+                                            <p class="card-text">
+                                                The block of code that performs the assertions on the state of the SUT
+                                                after the action.
+                                            </p>
+                                            <p class="card-text">   
+                                                Guidelines
+                                                <br>
+                                                1. Use a single block of code with no empty lines.
+                                                <br>
+                                                2. First test result, then side effects.
+                                                <br>
+                                                3. Limit the actions that you make in this block. Ideally, no actions
+                                                should happen, but that is not always possible.
+                                                <br>
+                                                4. Use simple blocks of assertions. If you find that you are repeatedly
+                                                writing the same code to extract information from the SUT and perform
+                                                assertions on it, then consider extracting an assertion helper.
+                                            </p>
+                                            <p class="card-text">
+                                                <a href="https://jamescooke.info/arrange-act-assert-pattern-for-python-developers.html"
+                                                    target="_blank">[Learn More]</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <br />
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
