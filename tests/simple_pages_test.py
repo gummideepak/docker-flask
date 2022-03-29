@@ -37,6 +37,18 @@ def test_request_githubactions(client):
     assert response.status_code == 200
     assert b"GitHub Actions" in response.data
 
+def test_request_oops(client):
+    """This makes the index page"""
+    response = client.get("/oops")
+    assert response.status_code == 200
+    assert b"Programming Terms" in response.data
+
+def test_request_aaa(client):
+    """This makes the index page"""
+    response = client.get("/aaa")
+    assert response.status_code == 200
+    assert b"Arrange Act Assert Testing Pattern" in response.data
+
 # def test_request_page2(client):
 #     """This makes the index page"""
 #     response = client.get("/page2")
